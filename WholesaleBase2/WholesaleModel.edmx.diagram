@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="728619ef7cae4665bf71ee0e082582b1" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="WholesaleBaseModel.Categories" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Customers" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.InvoiceItems" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Invoices" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Products" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Stock" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Suppliers" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Warehouses" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="WholesaleBaseModel.FK__Products__Catego__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="WholesaleBaseModel.FK__Invoices__Custom__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="WholesaleBaseModel.FK__InvoiceIt__Invoi__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="WholesaleBaseModel.FK__InvoiceIt__Produ__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="WholesaleBaseModel.FK__Stock__ProductID__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="WholesaleBaseModel.FK__Stock__Warehouse__2D27B809" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WholesaleBaseModel.Users" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

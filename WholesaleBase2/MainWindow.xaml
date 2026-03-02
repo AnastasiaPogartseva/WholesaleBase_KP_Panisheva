@@ -1,0 +1,38 @@
+﻿<Window x:Class="WholesaleBase2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:local="clr-namespace:WholesaleBase2"
+        mc:Ignorable="d"
+       Title="Оптовая база" 
+        Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Левое меню -->
+        <Border Grid.Column="0" Background="{StaticResource SecondaryBgBrush}">
+            <StackPanel Margin="15">
+                <TextBlock Text="МЕНЮ" Foreground="{StaticResource TextBrush}" 
+                           FontWeight="Bold" FontSize="16" Margin="10,20,10,20"/>
+
+                <Button Content="📦 Товары" Name="Products_Click" Click="Products_Click_1"  Height="45" Margin="10,5"/>
+                <Button Content="📁 Категории" Name="Categories_Click" Click="Categories_Click_1"  Height="45" Margin="10,5"/>
+                <Button Content="🏢 Склады" Name="Warehouses_Click" Click="Warehouses_Click_1"  Height="45" Margin="10,5"/>
+                <Button Content="📊 Остатки" Name="Stock_Click" Click="Stock_Click_1"  Height="45" Margin="10,5"/>
+                <Button Content="🚚 Поставщики" Name="Suppliers_Click" Click="Suppliers_Click_1"  Height="45" Margin="10,5"/>
+                <Button Content="👥 Клиенты" Name="Customers_Click" Click="Customers_Click_1"  Height="45" Margin="10,5"/>
+                <Button Content="📋 Накладные" Name="Invoices_Click" Click="Invoices_Click_1"  Height="45" Margin="10,5"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Правая часть -->
+        <Border Grid.Column="1" Background="White">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Border>
+    </Grid>
+</Window>

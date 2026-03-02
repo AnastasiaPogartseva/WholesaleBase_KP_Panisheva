@@ -1,0 +1,53 @@
+﻿<Page x:Class="WholesaleBase2.ProductsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WholesaleBase2"
+ xmlns:converters="clr-namespace:WholesaleBase2.Converters"
+      Title="ProductsPage"
+      Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <converters:ImagePathConverter x:Key="ImageConverter"/>
+    </Page.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Товары" FontSize="28" Foreground="{StaticResource TextBrush}" 
+                   FontWeight="Light" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button Content="➕ Добавить" Name="Add_Click" Click="Add_Click_1"  Width="120" Height="38" Margin="0,0,10,0"/>
+            <Button Content="✏️ Изменить" Name="Edit_Click" Click="Edit_Click_1"  Width="120" Height="38" Margin="0,0,10,0"/>
+            <Button Content="🗑️ Удалить" Name="Delete_Click" Click="Delete_Click_1"  Width="120" Height="38" Margin="0,0,10,0"/>
+            <Button Content="🔄 Обновить" Name="Refresh_Click" Click="Refresh_Click_1"  Width="120" Height="38"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgProducts" Grid.Row="2" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ProductID}" Width="50"/>
+
+                <DataGridTemplateColumn Header="Фото" Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImagePath, Converter={StaticResource ImageConverter}}" 
+                                   Width="50" Height="50" Stretch="UniformToFill"
+                                   Margin="5"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Наименование" Binding="{Binding ProductName}" Width="200"/>
+                <DataGridTextColumn Header="Категория" Binding="{Binding CategoryName}" Width="150"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="100"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

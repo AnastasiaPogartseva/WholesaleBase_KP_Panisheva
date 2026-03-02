@@ -1,0 +1,36 @@
+﻿<Page x:Class="WholesaleBase2.Views.CategoriesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WholesaleBase2.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+       Title="CategoriesPage">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Категории товаров" FontSize="28" Foreground="Black" 
+                   FontWeight="Light" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button Content="➕ Добавить" Name="AddClick" Click="AddClick_Click"  Width="120" Height="38" Margin="0,0,10,0"/>
+            <Button Content="✏️ Изменить" Name="EditClick" Click="EditClick_Click"  Width="120" Height="38" Margin="0,0,10,0"/>
+            <Button Content="🗑️ Удалить" Name="DeleteClick" Click="DeleteClick_Click"  Width="120" Height="38" Margin="0,0,10,0"/>
+            <Button Content="🔄 Обновить" Name="RefreshClick" Click="RefreshClick_Click"  Width="120" Height="38"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgCategories" Grid.Row="2" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding CategoryID}" Width="80"/>
+                <DataGridTextColumn Header="Название категории" Binding="{Binding CategoryName}" Width="250"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="400"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

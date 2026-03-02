@@ -1,0 +1,46 @@
+﻿<Window x:Class="WholesaleBase2.Views.WarehouseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WholesaleBase2.Views"
+        mc:Ignorable="d"
+         Title="Склад" 
+        Width="500" Height="500"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Border CornerRadius="10" Background="White" Padding="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="txtTitle" Text="Добавление склада" 
+                       FontSize="20" FontWeight="SemiBold" 
+                       Foreground="#5E4B3C" Margin="0,0,0,20"/>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Название склада:" Margin="0,0,0,5"/>
+                <TextBox x:Name="txtWarehouseName" Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Адрес:" Margin="0,0,0,5"/>
+                <TextBox x:Name="txtAddress" Height="35" Margin="0,0,0,15"/>
+
+                <TextBlock Text="Телефон:" Margin="0,0,0,5"/>
+                <TextBox x:Name="txtPhone" Height="35" Margin="0,0,0,15"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <Button Content="Сохранить" Name="saveclick1" Click="saveclick1_Click"
+                        Width="100" Height="35" Margin="0,0,10,0"/>
+                <Button Content="Отмена" Name="cancelclick1" Click="cancelclick1_Click" 
+                        Width="100" Height="35"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
